@@ -12,27 +12,51 @@
 <body>
 
   <main>
-    <div class="repo-link">
-      <a href="https://github.com/UnJavaScripter/web-serial-example">GitHub Repo</a>
     </div>
-    <section class="elements">
-      <div class="element">
-        <h3>Upload <a href="https://github.com/UnJavaScripter/web-serial-example/blob/master/web_serial_onboard_led.ino">the example code</a> to an Arduino</h3>
-      </div>
-      <div class="element">
-        <h2>Connect to a serial port</h2>
+      <div>
         <button id="connect-to-serial">Connect</button>
       </div>
-      <div class="element">
-        <h2>Send a message</h2>
-        <button class="message-button" data-value="0" disabled="true">Off</button>
-        <button class="message-button" data-value="1" disabled="true">On</button>
+      <div id="matrix">
+        <div class="row">
+          <button class="message-button" data-value="10|" disabled="true">F1</button>
+          <button class="message-button" data-value="11|" disabled="true">F2</button>
+          <button class="message-button" data-value="12|" disabled="true">F3</button>
+          <button class="message-button" data-value="13|" disabled="true">Next</button>
+        </div>
+        <div class="row">
+          <button class="message-button" data-value="14|" disabled="true">Mode</button>
+          <button class="message-button" data-value="15|" disabled="true">Enable</button>
+          <button class="message-button" data-value="16|" disabled="true">RePrint</button>
+          <button class="message-button" data-value="17|" disabled="true">Stop</button>
+        </div>
+        <div class="row">
+          <button class="message-button" data-value="7|" disabled="true">7</button>
+          <button class="message-button" data-value="8|" disabled="true">8</button>
+          <button class="message-button" data-value="9|" disabled="true">9</button>
+          <button class="message-button" data-value="18|" disabled="true">Sale/Setting</button>
+        </div>
+        <div class="row">
+          <button class="message-button" data-value="4|" disabled="true">4</button>
+          <button class="message-button" data-value="5|" disabled="true">5</button>
+          <button class="message-button" data-value="6|" disabled="true">6</button>
+          <button class="message-button" data-value="" disabled="true"></button>
+        </div>
+        <div class="row">
+          <button class="message-button" data-value="1|" disabled="true">1</button>
+          <button class="message-button" data-value="2|" disabled="true">2</button>
+          <button class="message-button" data-value="3|" disabled="true">3</button>
+          <button class="message-button" data-value="" disabled="true"></button>
+        </div>
+        <div class="row">
+          <button class="message-button" data-value="0|" disabled="true">0</button>
+          <button class="message-button" data-value="20|" disabled="true">ON/OFF</button>
+          <button class="message-button" data-value="21|" disabled="true">Adjust</button>
+          <button class="message-button" data-value="19|" disabled="true">Withdraw/Run</button>
       </div>
       <div class="element">
         <h2>Get a message back:</h2>
         <ol id="serial-messages-container"></ol>
       </div>
-    </section>
   </main>
   
   <script src="./dist/serial-handler.js" type="module"></script>

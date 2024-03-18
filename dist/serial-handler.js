@@ -60,7 +60,7 @@ var SerialHandler = /** @class */ (function () {
                         return [4 /*yield*/, navigator.serial.requestPort()];
                     case 2:
                         port = _a.sent();
-                        return [4 /*yield*/, port.open({ baudRate: 9600 })];
+                        return [4 /*yield*/, port.open({ baudRate: 115200 })];
                     case 3:
                         _a.sent(); // `baudRate` was `baudrate` in previous versions.
                         this.writer = port.writable.getWriter();
